@@ -9,9 +9,7 @@ import java.util.List;
 
 
 public interface CarService {
-    List<Car> createCarList();
 
     List<Car> getSomeCars(int value);
 
-    void addAttribute(Model model, Integer count, List<Car> cars);
 }
