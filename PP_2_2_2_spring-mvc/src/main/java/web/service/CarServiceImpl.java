@@ -23,7 +23,13 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> getSomeCars(int value) {
+    public List<Car> getSomeCars(String valueStr) {
+        int value;
+        if (valueStr != null) {
+            value = Integer.parseInt(valueStr);
+        } else {
+            value = 5;
+        }
         List<Car> newList = new ArrayList<>();
         for (int i = 0; i < value; i++) {
             newList.add(cars.get(i));
